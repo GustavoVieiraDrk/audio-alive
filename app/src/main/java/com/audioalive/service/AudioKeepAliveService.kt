@@ -31,7 +31,7 @@ class AudioKeepAliveService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(getString(R.string.notification_title))
-            .setContentText(getString(R.string.notification_channel_name))
+            .setContentText(getString(R.string.notification_text))
             .setSmallIcon(android.R.drawable.ic_media_play)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .build()
@@ -100,7 +100,7 @@ class AudioKeepAliveService : Service() {
     private fun createNotificationChannel() {
         val channel = NotificationChannel(
             CHANNEL_ID,
-            "USB Audio Service",
+            getString(R.string.notification_channel_name),
             NotificationManager.IMPORTANCE_LOW
         )
         val manager = getSystemService(NotificationManager::class.java)
