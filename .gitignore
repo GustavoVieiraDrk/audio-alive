@@ -1,0 +1,46 @@
+# Gradle and build files
+.gradle/
+build/
+*/build/
+gradle-app.setting
+
+# Local configuration files (SDK path, NDK, etc)
+local.properties
+
+# Android Studio and IntelliJ IDEA files
+.idea/
+.navigation/
+captures/
+*.iml
+*.ipr
+*.iws
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Log and cache files
+*.log
+*.hprof
+
+# Signing keys (NEVER commit your release keys to GitHub!)
+*.jks
+*.keystore
+
+# NDK generated files (C/C++) if used in the future
+.cxx/
+*.so
+
+# Test and report files
+*/build/reports/
+*/build/test-results/
+
+# Temporary files
+*~
+*.swp
