@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.app.ActivityCompat
@@ -56,7 +57,7 @@ class MainActivity : ComponentActivity() {
     private fun initAudioKeepAliveService() {
         val serviceIntent = Intent(this, AudioKeepAliveService::class.java)
         startForegroundService(serviceIntent)
-        Toast.makeText(this, "Serviço Iniciado!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.main_toast_service_started), Toast.LENGTH_SHORT).show()
         finish()
     }
 }
@@ -75,7 +76,7 @@ fun MainScreen(
             onClick = onStartServiceClick,
             modifier = Modifier.padding(16.dp)
         ) {
-            Text(text = "Iniciar Serviço de Áudio USB")
+            Text(text = stringResource(R.string.main_btn_start_service))
         }
     }
 }

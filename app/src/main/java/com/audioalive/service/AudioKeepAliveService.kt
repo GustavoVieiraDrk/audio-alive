@@ -10,6 +10,7 @@ import android.media.AudioTrack
 import android.os.IBinder
 import android.os.PowerManager
 import androidx.core.app.NotificationCompat
+import com.audioalive.R
 
 private const val CHANNEL_ID = "DAC_KEEPALIVE_CHANNEL"
 
@@ -29,8 +30,8 @@ class AudioKeepAliveService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("DAC Keep Alive Ativo")
-            .setContentText("Mantendo a porta USB de áudio aberta.")
+            .setContentTitle(getString(R.string.notification_title))
+            .setContentText(getString(R.string.notification_channel_name))
             .setSmallIcon(android.R.drawable.ic_media_play)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .build()

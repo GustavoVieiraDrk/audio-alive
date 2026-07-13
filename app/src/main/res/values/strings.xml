@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">audio-alive</string>
+
+    <string name="main_btn_start_service">Start USB Audio Service</string>
+
+    <string name="main_toast_service_started">Service Started!</string>
+
+    <string name="notification_channel_name">USB Audio Service</string>
+    <string name="notification_title">DAC KeepAlive Active</string>
+    <string name="notification_text">Keeping the USB audio port open.</string>
 </resources>
